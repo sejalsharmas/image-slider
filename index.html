@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme-changer</title>
+    <style>
+        body{
+            margin:0;
+            padding: 0%;
+            background-color: black;
+        }
+        .img1{
+            position: absolute;
+            width: 100vw;
+            height: 500px;
+            object-fit: cover;
+            
+        }
+        .btn-container{
+            position: absolute;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               gap: 1440px;
+               margin-top: 250px;
+               margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <img src="back_img.jpg" class="img1" id="img1"/>
+    <div class="btn-container">
+    <button type="button" onclick="prev()">prev</button>
+    <button type="button" onclick="next()">next</button>
+</div>
+<script>
+    const  gallery = [
+        "back_img.jpg",
+        "slider-img2.jpg",
+        "slider-img3.jpg",
+        "slider-img4.jpg"
+    ];
+    let imgIndex=0
+
+    function prev(){
+        if(imgIndex==0){
+            imgIndex=gallery.length-1
+        }
+        else{
+            imgIndex--;
+        }
+        const imgElement=document.getElementById("img1")
+
+        imgElement.src=gallery[imgIndex]
+          
+    }
+
+    function next(){
+        if(imgIndex==gallery.length-1){
+            imgIndex=0
+        }
+        else{
+            imgIndex++;
+        }
+        const imgElement=document.getElementById("img1")
+
+        imgElement.src=gallery[imgIndex]
+
+
+    }
+        
+    
+</script>
+</body>
+</html>
