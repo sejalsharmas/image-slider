@@ -23,23 +23,111 @@
                justify-content: center;
                align-items: center;
                gap: 1440px;
-               margin-top: 250px;
+               margin-top: 140px;
                margin-left: 10px;
+               height: 50px;
         }
+        .btn1{
+            height: 30px;
+        }
+        .btn2{
+            height: 30px;
+        }
+
+        .container4{
+    background-image: url('../images/science-page-images/back_img.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top:150px ;
+    height: 400px;
+    position: absolute;
+    }
+
+.text{
+    font-size: 50px;
+    font-family: "Oswald", sans-serif;
+    color:beige;
+    margin-left: 50px;
+    position: absolute;
+    margin-top: 100px;
+
+}
+.text2{
+    font-size: 50px;
+    font-family: "Oswald", sans-serif;
+    color: beige;
+    margin-left: 50px;
+    position: absolute;
+    margin-top: 150px;
+}
+.text3{
+    font-size: 50px;
+    font-family: "Oswald", sans-serif;
+    color: beige;
+    margin-left: 50px;
+    position: absolute;
+    margin-top: 200px;
+}
+.text4{
+    font-size: 25px;
+    color:#fffffe;
+    letter-spacing: 0.2rem;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    margin-left: 50px;
+    position: absolute;
+    margin-top: 240px;
+}
+.color{
+   color: #2B7A78;
+}
+.btn{
+    padding:10px 35px;
+    background-color: #0f0e17;
+    color:#ff8906;
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 18px;
+    border: 2px solid  #ff8906;
+    margin-left: 50px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 20px;
+    position: absolute;
+    margin-top: 300px;
+
+}
     </style>
 </head>
 <body>
-    <img src="back_img.jpg" class="img1" id="img1"/>
+    <div>
+    <img src="./gallery/back_img.jpg" class="img1" id="img1"/>
+    <span class="text">SCIENCE OPENS DOORS</span>
+    <br>
+    <span class="text2">YOU<span class="color"> NEVER</span></span>
+    <br>
+    <span class="text3">KNEW EXISTED</span></img>
+    <br>
+    <span class="text4">GROW YOUR LOVE FOR SCIENCE WITH US</span>
+    <br>
+   <a href="../science_pages/bio.html"><button class="btn">Get Started</button></a>
+    
     <div class="btn-container">
-    <button type="button" onclick="prev()">prev</button>
-    <button type="button" onclick="next()">next</button>
+    <img src="./gallery/left-arrow.png" onclick="prev()" class="btn1"/>
+    <img src="./gallery/next.png" onclick="next()" class="btn2"/>
+</div>
 </div>
 <script>
     const  gallery = [
-        "back_img.jpg",
-        "slider-img2.jpg",
-        "slider-img3.jpg",
-        "slider-img4.jpg"
+        "./gallery/back_img.jpg",
+        "./gallery/slider-img2.jpg",
+        "./gallery/slider-img3.jpg",
+        "./gallery/slider-img4.jpg"
     ];
     let imgIndex=0
 
@@ -69,6 +157,8 @@
 
 
     }
+
+    setInterval(next,2000);
         
     
 </script>
